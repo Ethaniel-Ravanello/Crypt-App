@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 
 import Navbar from "./components/Navbar";
+import TopMover from "./components/TopMover";
+
+import Search from "./assets/search.svg";
 
 function App() {
   const [crypto, setCrypto] = useState([]);
@@ -29,6 +32,8 @@ function App() {
     getPrice();
   }, []);
 
+  console.log(prices);
+
   return (
     <div className="w-[70%] mx-auto">
       <Navbar />
@@ -36,15 +41,17 @@ function App() {
         <p className="font-bold text-3xl pt-2">
           Harga Crypto dalam Rupiah hari ini
         </p>
-        <div className="relative">
-          <input
-            className="bg-input h-full px-2 py-3.5 rounded-lg w-[300px]"
-            type="text"
-            placeholder="Search"
-            name=""
-            id=""
+        <div className="bg-input mt-1.5 pl-7 pr-2 py-3.5 rounded-lg w-[300px] h-[50px] relative cursor-pointer">
+          <img
+            className="w-5 h-5 absolute left-3 top-[17px]"
+            src={Search}
+            alt="Search Icon"
           />
+          <p className="pl-3 text-placeholder">Cari Aset Pintu</p>
         </div>
+      </div>
+      <div className="w-full mt-10">
+        <TopMover data={crypto} price={prices} />
       </div>
     </div>
   );
