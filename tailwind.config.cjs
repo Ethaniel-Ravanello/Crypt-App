@@ -6,6 +6,7 @@ module.exports = {
       baru: "#FF4444",
       grey: "#424849",
       placeholder: "#AE9599",
+      price: "#A495A0",
       white: "#FFFFFF",
       input: "#F2F2F2",
       filter: "#EDF4FE",

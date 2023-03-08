@@ -1,5 +1,7 @@
 import React from "react";
 
+import TopCard from "./TopCard";
+
 const TopMover = ({ data, price }) => {
   let dataSlice = data.slice(2, 8);
   let dataSorted = dataSlice
@@ -16,39 +18,13 @@ const TopMover = ({ data, price }) => {
   return (
     <div>
       <p className="font-bold text-xl">🔥 Top Movers (24 Jam)</p>
-      <div className="flex">
-        <div>
-          {dataSlice
-            .sort((a, b) => (a.currencyGroup > b.currencyGroup ? 1 : -1))
-            .map((data) => {
-              return (
-                <ul>
-                  <li>{data.currencyGroup}</li>
-                </ul>
-              );
-            })}
-        </div>
-
-        <div>
-          {price
-            .sort((a, b) => (a.pair > b.pair ? 1 : -1))
-            .map((data) => {
-              if (
-                data.pair === "bnb/idr" ||
-                data.pair === "comp/idr" ||
-                data.pair === "eth/idr" ||
-                data.pair === "link/idr" ||
-                data.pair === "snx/idr" ||
-                data.pair === "usdt/idr"
-              ) {
-                return (
-                  <ul>
-                    <li>{data.day}</li>
-                  </ul>
-                );
-              }
-            })}
-        </div>
+      <div className="flex justify-between gap-14">
+        <TopCard />
+        <TopCard />
+        <TopCard />
+        <TopCard />
+        <TopCard />
+        <TopCard />
       </div>
     </div>
   );
