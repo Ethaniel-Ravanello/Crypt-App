@@ -36,7 +36,7 @@ function App() {
         <p className="font-bold text-3xl pt-2">
           Harga Crypto dalam Rupiah hari ini
         </p>
-        <div>
+        <div className="relative">
           <input
             className="bg-input h-full px-2 py-3.5 rounded-lg w-[300px]"
             type="text"
