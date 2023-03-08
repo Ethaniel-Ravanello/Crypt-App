@@ -33,6 +33,7 @@ function App() {
   }, []);
 
   console.log(prices);
+  console.log(crypto);
 
   return (
     <div className="w-[70%] mx-auto">
