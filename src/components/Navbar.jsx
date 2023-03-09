@@ -4,8 +4,8 @@ const Navbar = () => {
   return (
     <div className="w-full">
       <div className="flex justify-between">
-        <div className="py-5 font-bold text-3xl">
-          PIN<span className="text-icon">TU</span>
+        <div className="py-9 font-bold text-3xl">
+          <img src="/pintu.svg" alt="" />
         </div>
 
         <div className="w-[60%] flex justify-between pt-1">
