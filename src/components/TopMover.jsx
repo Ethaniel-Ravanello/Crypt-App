@@ -13,7 +13,7 @@ const TopMover = ({ data, price }) => {
       };
     });
 
-  console.log(dataSorted);
+  console.log(dataSorted.name);
 
   return (
     <div>
@@ -30,16 +30,12 @@ const TopMover = ({ data, price }) => {
               data.pair === "snx/idr" ||
               data.pair === "usdt/idr"
             ) {
-              return (
-                <TopCard
-                  key={data.name}
-                  data={dataSorted}
-                  day={data.day}
-                  price={data.latestPrice}
-                />
-              );
+              return <p>{data.pair}</p>;
             }
           })}
+        {dataSorted.map((data) => {
+          return <p>{data.name}</p>;
+        })}
       </div>
     </div>
   );
